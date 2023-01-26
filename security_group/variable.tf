@@ -15,6 +15,7 @@ variable "ingress_rules" {
       to_port     = 22
       protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
+
     }
   ]
 }
@@ -30,8 +31,9 @@ variable "egress_rules" {
     {
       from_port   = 0
       to_port     = 0
-      protocol    = "all"
+      protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
+
     }
   ]
 }
