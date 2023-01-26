@@ -2,5 +2,10 @@
 
 - [x] VPC
 - [x] Security Group
-- [ ] EC2
-- [ ] RDS
+- [x] EC2
+- [x] RDS
+
+# Evoluções
+
+- [ ] All tags
+- [ ] Add rules sg
