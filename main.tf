@@ -8,9 +8,9 @@ module "security_group" {
 }
 
 module "ec2" {
-  source            = "./ec2"
-  subnet_id         = module.vpc.public_subnet_id
-  security_group_id = module.security_group.security_group_id
+  source                 = "./ec2"
+  subnet_id              = module.vpc.public_subnet_id
+  vpc_security_group_ids = module.security_group.security_group_id
 }
 
 /*

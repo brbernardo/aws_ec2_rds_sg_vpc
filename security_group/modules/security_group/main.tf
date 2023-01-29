@@ -1,7 +1,7 @@
 resource "aws_security_group" "security_group" {
   vpc_id      = var.vpc_id
   name        = "example-sg"
-  description = "example security group"
+  description = "Default security group to allow inbound/outbound from the VPC"
 
   ingress {
     from_port   = var.ingress_rules[0].from_port

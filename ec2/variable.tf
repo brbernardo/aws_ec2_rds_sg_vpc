@@ -8,7 +8,7 @@ variable "subnet_id" {
   default = ""
 }
 
-variable "security_group_id" {
+variable "vpc_security_group_ids" {
   type    = string
   default = ""
 }
