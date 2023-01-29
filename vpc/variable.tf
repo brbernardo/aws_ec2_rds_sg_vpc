@@ -39,15 +39,26 @@ variable "privatesCIDRblock" {
   default     = "10.0.2.0/24"
 }
 
-variable "mapPublicIP" {
+variable "destination_cidr_block" {
+  type        = string
+  description = "The CIDR block for the private subnet"
+  default     = "0.0.0.0/0"
+}
+
+variable "mapPublicIP_public_subnet" {
   type        = bool
   description = "Whether instances in the subnet should be assigned a public IP address"
   default     = true
 }
+variable "mapPublicIP_private_subnet" {
+  type        = bool
+  description = "Whether instances in the subnet should be assigned a public IP address"
+  default     = false
+}
 
 variable "availabilityZone" {
   type    = string
-  default = "us-west-2a"
+  default = "us-east-1a"
 }
 
 

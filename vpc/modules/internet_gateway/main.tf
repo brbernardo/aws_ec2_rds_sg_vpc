@@ -4,7 +4,3 @@ resource "aws_internet_gateway" "IGW" {
     Name = "Internet gateway"
   }
 }
-
-output "gateway_id" {
-  value = aws_internet_gateway.IGW.id
-}

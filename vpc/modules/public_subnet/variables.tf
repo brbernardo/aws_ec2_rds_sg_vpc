@@ -18,10 +18,6 @@ variable "publicsCIDRblock" {
   type = string
 }
 
-variable "privatesCIDRblock" {
-  type = string
-}
-
 variable "mapPublicIP" {
   type = bool
 }
