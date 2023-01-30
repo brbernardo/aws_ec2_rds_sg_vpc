@@ -4,16 +4,20 @@ resource "aws_security_group" "security_group" {
   description = "Default security group to allow inbound/outbound from the VPC"
 
   ingress {
-    from_port   = var.ingress_rules[0].from_port
-    to_port     = var.ingress_rules[0].to_port
-    protocol    = var.ingress_rules[0].protocol
-    cidr_blocks = var.ingress_rules[0].cidr_blocks
+    from_port = var.ingress_rules[0].from_port
+    to_port   = var.ingress_rules[0].to_port
+    protocol  = var.ingress_rules[0].protocol
+    self      = var.ingress_rules[0].self
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
   }
 
   egress {
-    from_port   = var.egress_rules[0].from_port
-    to_port     = var.egress_rules[0].to_port
-    protocol    = var.egress_rules[0].protocol
-    cidr_blocks = var.egress_rules[0].cidr_blocks
+    from_port = var.egress_rules[0].from_port
+    to_port   = var.egress_rules[0].to_port
+    protocol  = var.egress_rules[0].protocol
+    self      = var.egress_rules[0].self
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
   }
 }
