@@ -13,9 +13,7 @@ module "ec2" {
   vpc_security_group_ids = module.security_group.security_group_id
 }
 
-/*
 module "rds" {
   source            = "./rds"
   subnet_id = tolist([module.vpc.public_subnet_id])
 }
-*/
