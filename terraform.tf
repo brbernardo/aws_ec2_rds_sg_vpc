@@ -1,4 +1,10 @@
 terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.00"
+    }
+  }
   /*
   backend "s3" {
     bucket  = "my-tf-state-bucket"

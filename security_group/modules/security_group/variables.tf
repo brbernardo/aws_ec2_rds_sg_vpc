@@ -7,7 +7,6 @@ variable "ingress_rules" {
     from_port = number
     to_port   = number
     protocol  = string
-    self     = bool
   }))
 }
 
@@ -16,6 +15,5 @@ variable "egress_rules" {
     from_port = number
     to_port   = number
     protocol  = string
-    self      = bool
   }))
 }

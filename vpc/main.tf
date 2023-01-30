@@ -73,6 +73,7 @@ module "public_internet_gateway" {
   route_table_id         = module.public_route_table.public_route_table_id
   destination_cidr_block = var.destination_cidr_block
   gateway_id             = module.internet_gateway.gateway_id
+  depends_on = [module.internet_gateway, module.public_route_table]
 }
 
 /*==== Routing table for private internet gateway ======*/
@@ -81,6 +82,7 @@ module "private_nat_gateway" {
   route_table_id         = module.private_route_table.private_route_table_id
   destination_cidr_block = var.destination_cidr_block
   nat_gateway_id         = module.nat.aws_nat_gateway_id
+  depends_on             = [module.nat, module.private_route_table] 
 }
 
 /* Route table public associations */

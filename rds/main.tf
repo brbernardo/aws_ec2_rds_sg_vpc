@@ -19,4 +19,5 @@ resource "aws_db_instance" "example" {
   backup_retention_period   = 7
   maintenance_window        = "Fri:09:00-Fri:09:30"
   final_snapshot_identifier = "example-final-snapshot"
+  skip_final_snapshot = true
 }

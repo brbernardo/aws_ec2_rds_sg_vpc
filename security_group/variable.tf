@@ -7,14 +7,14 @@ variable "ingress_rules" {
     from_port = number
     to_port   = number
     protocol  = string
-    self      = bool
+
   }))
   default = [
     {
       from_port = "0"
       to_port   = "0"
       protocol  = "-1"
-      self      = true
+
 
     }
   ]
@@ -25,14 +25,14 @@ variable "egress_rules" {
     from_port = number
     to_port   = number
     protocol  = string
-    self      = bool
+
   }))
   default = [
     {
       from_port = "0"
       to_port   = "0"
       protocol  = "-1"
-      self      = "true"
+
 
     }
   ]

@@ -5,5 +5,5 @@ module "ec2" {
   ami_id                 = data.aws_ami.amzn.id
   instance_type          = var.instance_type
   key_name               = var.key_name
-  user_data              = var.user_data
+  user_data              = file("${path.module}/install_wp.sh")
 }
